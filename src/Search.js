@@ -61,7 +61,7 @@ class Search extends React.Component {
                 <div className="search-books-results">
                     <ol className="books-grid">
                         {this.state.searchResults.map((book) => (
-                            <li>
+                            <li key={book.id}>
                                 <Book id={book.id} coverWidth={128} coverHeight={188}
                                       backgroundImage={book.imageLinks.thumbnail} title={book.title}
                                       authors={book.authors} shelf={book.shelf} shelfChange={this.props.shelfChange}/>
